@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #78bbe0;
+    color: #fff;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 100px 0 50px 0;
+}
+
+.widget-from {
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+
+.widget-to {
+    float: right;
+    position: relative;
+    margin-right: 10px;
+}
+
+select,
+input {
+    font-family: inherit;
+    border-radius: 5px;
+    color: #3A3A3A;
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+}
+
+select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 2px 4px 6px;
+    text-align: center;
+}
+
+input {
+    text-align: right;
+    width: 230px;
+    padding: 5px 10px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px #0000FF;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px #0000FF;
+}
+
+.widget-from input {
+    background-image: radial-gradient( #fff, #6AE0DD);
+}
+
+.widget-to input {
+    background-image: radial-gradient( #fff, #EDEAEA);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+button {
+    margin: 80px 0;
+    padding: 7px 56px;
+    background: #4c99bf;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 19px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
