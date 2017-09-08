@@ -1,5 +1,5 @@
 (function IIFE() {
-    //•	Widget should initialize with 1 on the left, and calculated value on the right.
+
     var eurToRsd = 119.559;
     var eurToUsd = 1.19270;
     var rsdToEur = 0.00836;
@@ -9,6 +9,9 @@
     var convertedValue = document.getElementById("converted-value");
     var slct1 = document.getElementById("slct1");
     var slct2 = document.getElementById("slct2");
+
+
+    makeRequest();
 
     initWidges();
 
@@ -60,5 +63,31 @@
             updateValue(convertedValue, "eur", "usd", eurToUsd);
 
         }
+    }
+
+    function makeRequest() {
+        httpRequest = new XMLHttpRequest();
+
+        if (!httpRequest) {
+            alert('Giving up :( Cannot create an XMLHTTP instance');
+            return false;
+        }
+        httpRequest.onreadystatechange = alertContents;
+        httpRequest.open('GET', '/kursna-lista');
+        httpRequest.send();
+    }
+
+    function alertContents() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+                data = JSON.parse(httpRequest.responseText).result;
+
+
+                /*objekat obuhvatiti promenljivom, onda property na result daje vrednost valuta. Genericki pravim select, oba! Valute brisem dodavanjem css klase sa display: none! */
+            } else {
+                alert('Something went wrong');
+            }
+        }
+
     }
 })();
