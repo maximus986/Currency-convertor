@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .clear:before,
@@ -22,7 +23,6 @@ body {
 .container {
     width: 600px;
     margin: 0 auto;
-    text-align: center;
 }
 
 h1 {
@@ -30,6 +30,11 @@ h1 {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 100px 0 50px 0;
+    text-align: center;
+}
+
+.widgets {
+    margin-bottom: 80px;
 }
 
 .widget-from {
@@ -60,12 +65,18 @@ select {
     left: 0;
     padding: 4px 2px 4px 6px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 input {
     text-align: right;
     width: 230px;
     padding: 5px 10px;
+}
+
+p {
+    text-align: left;
+    margin-top: 10px;
 }
 
 input:focus {
@@ -86,16 +97,9 @@ select:focus {
     background-image: radial-gradient( #fff, #EDEAEA);
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0;
-    /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-button {
-    margin: 80px 0;
+#reset-btn {
+    display: block;
+    margin: 0 auto;
     padding: 7px 56px;
     background: #4c99bf;
     border: none;
@@ -107,4 +111,71 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+.deleted {
+    visibility: hidden;
+}
+
+.warning {
+    color: #de0808;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 60%;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    .widgets {
+        margin: 0 auto;
+    }
+    .widget-to,
+    .widget-from {
+        float: none;
+        margin: 25px auto 65px auto;
+        text-align: center;
+        width: 100%;
+    }
+    .widget-to {
+        margin-bottom: 40px;
+    }
+    select {
+        top: 0;
+        left: 0;
+    }
+    input {
+        width: 100%;
+    }
+    #reset-btn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .container {
+        width: 90%;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    .widgets {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .widget-to,
+    .widget-from {
+        float: none;
+        margin: 50px auto;
+        text-align: center;
+        width: 100%;
+    }
+    select {
+        top: 0;
+        left: 0;
+    }
+    #reset-btn {
+        width: 100%;
+    }
 }
