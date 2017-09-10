@@ -96,16 +96,20 @@
         var selectToDeleted = selectTo.querySelectorAll(".deleted");
         for (var i = 0; i < selectToDeleted.length; i++) {
             selectToDeleted[i].classList.remove("deleted");
+            selectToDeleted[i].removeAttribute("hidden");
         }
 
         selectTo.querySelector('option[value="' + currencyFrom + '"]').classList.add("deleted");
+        selectTo.querySelector('option[value="' + currencyFrom + '"]').setAttribute("hidden", true);
 
         var selectFromDeleted = selectFrom.querySelectorAll(".deleted");
         for (var i = 0; i < selectFromDeleted.length; i++) {
             selectFromDeleted[i].classList.remove("deleted");
+            selectFromDeleted[i].removeAttribute("hidden");
         }
 
         selectFrom.querySelector('option[value="' + currencyTo + '"]').classList.add("deleted");
+        selectFrom.querySelector('option[value="' + currencyTo + '"]').setAttribute("hidden", true);
     }
 
     function makeRequest() {
