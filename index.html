@@ -17,18 +17,22 @@
 </head>
 
 <body>
-    <div class="container clear">
+    <div class="container">
         <h1>Currency convertor</h1>
+        <div class="widgets clear">
+            <div class="widget-from">
+                <select name="currency-from" id="currency-from"></select>
+                <input type="text" id="ammount-from">
+                <p class="deleted warning">Please enter a number</p>
+            </div>
 
-        <div class="widget-from">
-
+            <div class="widget-to">
+                <select name="currency-to" id="currency-to"></select>
+                <input type="text" id="ammount-to">
+            </div>
         </div>
 
-        <div class="widget-to">
-
-        </div>
-
-        <button>Reset</button>
+        <button id="reset-btn">Reset</button>
     </div>
 
     <script src="js/app.js"></script>
