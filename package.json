@@ -1,24 +1,25 @@
 {
-  "name": "currency-converter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "js/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maximus986/Currency-convertor.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maximus986/Currency-convertor/issues"
-  },
-  "homepage": "https://github.com/maximus986/Currency-convertor#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-webserver": "^0.9.1",
-    "webpack-dev-server": "^2.7.1"
-  }
+    "name": "currency-converter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "js/app.js",
+    "scripts": {
+        "start": "gulp webserver",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maximus986/Currency-convertor.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/maximus986/Currency-convertor/issues"
+    },
+    "homepage": "https://github.com/maximus986/Currency-convertor#readme",
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-webserver": "^0.9.1",
+        "webpack-dev-server": "^2.7.1"
+    }
 }
